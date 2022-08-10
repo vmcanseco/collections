@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6e54e5b-82d4-4463-8f0d-3bc4d43562f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/collections/trainig/java/collections/list/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/collections/trainig/java/collections/list/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/collections/trainig/java/collections/list/arraylist/ArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/collections/trainig/java/collections/list/arraylist/ArrayList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/collections/trainig/java/collections/list/linkedlist/IList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/collections/trainig/java/collections/list/linkedlist/IList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/collections/trainig/java/collections/list/linkedlist/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/collections/trainig/java/collections/list/linkedlist/LinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trainig/java/collections/list/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trainig/java/collections/list/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trainig/java/collections/list/arraylist/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trainig/java/collections/list/arraylist/ArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trainig/java/collections/list/linkedlist/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trainig/java/collections/list/linkedlist/LinkedList.java" afterDir="false" />
-    </list>
+    <list default="true" id="f6e54e5b-82d4-4463-8f0d-3bc4d43562f4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659650901815</updated>
-      <workItem from="1659650909700" duration="11903000" />
+      <workItem from="1659650909700" duration="12145000" />
     </task>
     <servers />
   </component>
