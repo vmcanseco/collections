@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6e54e5b-82d4-4463-8f0d-3bc4d43562f4" name="Default Changelist" comment="" />
+    <list default="true" id="f6e54e5b-82d4-4463-8f0d-3bc4d43562f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/collections/trainig/java/collections/list/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/collections/trainig/java/collections/list/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/collections/trainig/java/collections/list/arraylist/ArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/collections/trainig/java/collections/list/arraylist/ArrayList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/collections/trainig/java/collections/list/linkedlist/IList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/collections/trainig/java/collections/list/linkedlist/IList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/collections/trainig/java/collections/list/linkedlist/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/collections/trainig/java/collections/list/linkedlist/LinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trainig/java/collections/list/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trainig/java/collections/list/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trainig/java/collections/list/arraylist/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trainig/java/collections/list/arraylist/ArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trainig/java/collections/list/linkedlist/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trainig/java/collections/list/linkedlist/LinkedList.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +26,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="2CuSJ1BMeqOBMOFVaqGL5Q5veEg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
@@ -77,11 +92,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659650901815</updated>
-      <workItem from="1659650909700" duration="11023000" />
+      <workItem from="1659650909700" duration="11903000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

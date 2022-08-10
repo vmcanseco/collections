@@ -3,12 +3,11 @@ package trainig.java.collections.list;
 import trainig.java.collections.list.linkedlist.IList;
 import trainig.java.collections.list.linkedlist.LinkedList;
 
-import java.util.concurrent.ExecutionException;
 
 public class Main {
 
     public static void main(String[] args) {
-        IList list = new LinkedList();
+        /*IList list = new LinkedList();
         list.add("One");
         list.add("Two");
         list.add("Three");
@@ -24,7 +23,7 @@ public class Main {
             System.out.println(ex.getMessage());
         }finally {
             System.out.println("Size " + list.getSize());
-        }
+        }*/
 
 
         /*System.out.println("First element: " + list.getHead().getData());

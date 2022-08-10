@@ -44,9 +44,8 @@ public class LinkedList  implements IList{
 
     @Override
     public String getAt(int index) throws Exception {
-        if (this.size==-1 || index> this.size){
-            throw new Exception(String.format("Index out of range {%d} ",index));
-        }
+        validateBounds(index);
+
         int iteration=0;
         Node tmp = head;
         String element=null;
@@ -63,9 +62,7 @@ public class LinkedList  implements IList{
 
     @Override
     public void setAt(int index, String element) throws Exception{
-        if (this.size==-1 || index> this.size){
-            throw new Exception(String.format("Index out of range {%d} ",index));
-        }
+        validateBounds(index);
         int iteration=0;
         Node current = this.head;
         Node previous = null;
@@ -93,9 +90,8 @@ public class LinkedList  implements IList{
 
     @Override
     public void removeAt(int index) throws Exception {
-        if (this.size==-1 || index> this.size){
-            throw new Exception(String.format("Index out of range {%d} ",index));
-        }
+        validateBounds(index);
+
         int iteration=0;
         Node current = this.head;
         Node previous = null;
@@ -126,6 +122,12 @@ public class LinkedList  implements IList{
     @Override
     public Node getHead() {
         return this.head;
+    }
+
+    private void validateBounds(int index) throws Exception {
+        if (this.size==-1 || index> this.size){
+            throw new Exception(String.format("Index out of range {%d} ",index));
+        }
     }
 
 
