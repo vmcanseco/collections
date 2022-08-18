@@ -1,7 +1,6 @@
-package trainig.java.collections.list.arraylist;
+package training.java.collections.list.arraylist;
 
-import trainig.java.collections.list.linkedlist.IList;
-import trainig.java.collections.list.linkedlist.Node;
+import training.java.collections.list.IList;
 
 public class ArrayList implements IList {
     private int size;
@@ -38,8 +37,4 @@ public class ArrayList implements IList {
         return 0;
     }
 
-    @Override
-    public Node getHead() {
-        return null;
-    }
 }
