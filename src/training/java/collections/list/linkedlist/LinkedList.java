@@ -24,7 +24,7 @@ public class LinkedList implements IList {
         this.size++;
     }
 
-    public void iterate(){
+    /*public void iterate(){
         Node tmp = this.head;
         while (tmp!=null){
             System.out.println("-------------------------");
@@ -38,7 +38,7 @@ public class LinkedList implements IList {
             System.out.println("-------------------------");
             tmp=tmp.next;
         }
-    }
+    }*/
 
 
     @Override
@@ -150,7 +150,7 @@ public class LinkedList implements IList {
 
     private void validateBounds(int index) throws Exception {
         if (this.size == -1 || index > this.size) {
-            throw new Exception(String.format("Index out of range {%d} ", index));
+            throw new Exception(String.format("Index out of range {%d}", index));
         }
     }
 
