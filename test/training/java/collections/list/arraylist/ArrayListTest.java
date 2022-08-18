@@ -57,7 +57,7 @@ public class ArrayListTest {
         list.removeAt(1);
 
         //then
-        Assertions.assertEquals(1,list.getSize());
+        Assertions.assertEquals(2,list.getSize());
 
     }
     @Test
