@@ -29,12 +29,12 @@ public class ArrayListTest {
         list.add("One");
 
         //then
-        Assertions.assertEquals(true, list.contains("One"));
+        Assertions.assertTrue(list.contains("One"));
 
     }
 
     @Test
-    void whenItemAdded_thenItemNotFound() throws Exception {
+    void whenItemAdded_thenItemNotFound() {
         //given
         IList list = new ArrayList();
 
@@ -42,7 +42,7 @@ public class ArrayListTest {
         list.add("One");
 
         //then
-        Assertions.assertEquals(false, list.contains("Two"));
+        Assertions.assertFalse(list.contains("Two"));
 
     }
     @Test
@@ -58,6 +58,8 @@ public class ArrayListTest {
 
         //then
         Assertions.assertEquals(2,list.getSize());
+        Assertions.assertEquals("One",list.getAt(0));
+        Assertions.assertEquals("Three",list.getAt(1));
 
     }
     @Test
@@ -72,9 +74,10 @@ public class ArrayListTest {
         list.setAt(1,"Two");
 
         //then
+        Assertions.assertEquals("One",list.getAt(0));
         Assertions.assertEquals("Two",list.getAt(1));
-        Assertions.assertEquals("Three",list.getAt(2));
-        Assertions.assertEquals("Four",list.getAt(3));
+        Assertions.assertEquals("Four",list.getAt(2));
+        Assertions.assertEquals(3,list.getSize());
     }
     @Test
     void whenItemAddedAtInvalidIndex_thenException()  {
@@ -90,4 +93,20 @@ public class ArrayListTest {
             Assertions.assertEquals("Index out of range {2}",ex.getMessage());
         }
     }
+
+    @Test
+    void whenGettingItemdAtInvalidIndex_thenException()  {
+        //given
+        IList list = new ArrayList();
+        list.add("One");
+
+        //when
+        try {
+            list.getAt(2);
+            Assertions.fail("Element found at posx 2");
+        } catch (Exception ex) {
+            Assertions.assertEquals("Index out of range {2}",ex.getMessage());
+        }
+    }
+
 }
