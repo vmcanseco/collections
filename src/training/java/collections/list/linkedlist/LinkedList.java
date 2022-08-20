@@ -1,15 +1,21 @@
 package training.java.collections.list.linkedlist;
 
+import training.java.collections.list.BaseList;
 import training.java.collections.list.IList;
 
-public class LinkedList implements IList {
-    private int size = -1;
+public class LinkedList extends BaseList implements IList {
+
     private Node head;
     private Node last;
 
 
+    public LinkedList() {
+        size = -1;
+    }
+
     @Override
     public void add(String element) {
+        checkNullValue(element);
         Node tmp = new Node();
         tmp.data = element;
         if (head == null) {
@@ -43,6 +49,7 @@ public class LinkedList implements IList {
 
     @Override
     public boolean contains(String element) {
+        checkNullValue(element);
         boolean found = false;
 
         Node tmp = this.head;
@@ -58,7 +65,7 @@ public class LinkedList implements IList {
     }
 
     @Override
-    public String getAt(int index) throws Exception {
+    public String getAt(int index) {
         validateBounds(index);
 
         int iteration = 0;
@@ -76,7 +83,8 @@ public class LinkedList implements IList {
     }
 
     @Override
-    public void setAt(int index, String element) throws Exception {
+    public void setAt(int index, String element) {
+        checkNullValue(element);
         validateBounds(index);
         int iteration = 0;
         Node current = this.head;
@@ -85,21 +93,21 @@ public class LinkedList implements IList {
         Node previous = null;
         while (current != null) {
             if (iteration == index) {
-                    if (previous!=null){
-                        tmp.next = current;
-                        tmp.previous = previous;
-                        current.previous = tmp;
-                        previous.next=tmp;
-                    }else{
-                        tmp.next=current;
-                        current.previous=tmp;
-                    }
-
-                    if (tmp.previous==null){
-                        this.head = tmp;
-                    }
-                    break;
+                if (previous != null) {
+                    tmp.next = current;
+                    tmp.previous = previous;
+                    current.previous = tmp;
+                    previous.next = tmp;
+                } else {
+                    tmp.next = current;
+                    current.previous = tmp;
                 }
+
+                if (tmp.previous == null) {
+                    this.head = tmp;
+                }
+                break;
+            }
             previous = current;
             current = current.next;
             iteration++;
@@ -108,7 +116,7 @@ public class LinkedList implements IList {
     }
 
     @Override
-    public void removeAt(int index) throws Exception {
+    public void removeAt(int index) {
         validateBounds(index);
 
         int iteration = 0;
@@ -119,12 +127,12 @@ public class LinkedList implements IList {
 
             if (iteration == index) {
                 if (previous != null) {
-                    Node next  = current.next;
+                    Node next = current.next;
                     previous.next = next;
-                    if (next!=null){
+                    if (next != null) {
                         next.previous = previous;
-                    }else{
-                        current.previous=null;
+                    } else {
+                        current.previous = null;
                         this.last = previous;
                     }
 
@@ -147,10 +155,10 @@ public class LinkedList implements IList {
     }
 
 
-
-    private void validateBounds(int index) throws Exception {
+    @Override
+    protected void validateBounds(int index) {
         if (this.size == -1 || index > this.size) {
-            throw new Exception(String.format("Index out of range {%d}", index));
+            throw new IndexOutOfBoundsException(String.format("Index out of range {%d}", index));
         }
     }
 

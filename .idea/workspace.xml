@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6e54e5b-82d4-4463-8f0d-3bc4d43562f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/training/java/collections/list/IList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/training/java/collections/list/linkedlist/LinkedListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/training/java/collections/list/BaseList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/training/java/collections/list/exceptions/NotNullValueAllowedException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections.iml" beforeDir="false" afterPath="$PROJECT_DIR$/collections.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trainig/java/collections/list/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trainig/java/collections/list/arraylist/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/arraylist/ArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trainig/java/collections/list/linkedlist/IList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trainig/java/collections/list/linkedlist/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trainig/java/collections/list/linkedlist/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/IList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/IList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/arraylist/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/arraylist/ArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/training/java/collections/list/arraylist/ArrayListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/training/java/collections/list/arraylist/ArrayListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/training/java/collections/list/linkedlist/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/training/java/collections/list/linkedlist/LinkedListTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="114" />
+    <option name="myElementSize" value="85" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="collections" />
@@ -46,6 +44,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/training/java/collections/list" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="training.java.collections.list.exceptions" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -59,16 +63,66 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LinkedListTest.whenIterate">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="trainig.java.collections.list.Main" />
+  <component name="RunManager" selected="JUnit.LinkedListTest">
+    <configuration name="ArrayListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="collections" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="trainig.java.collections.list.*" />
+          <option name="PATTERN" value="training.java.collections.list.arraylist.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="training.java.collections.list.arraylist" />
+      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.arraylist.ArrayListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayListTest.whenGettingItemdAtInvalidIndex_thenException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="collections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="training.java.collections.list.arraylist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="training.java.collections.list.arraylist" />
+      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.arraylist.ArrayListTest" />
+      <option name="METHOD_NAME" value="whenGettingItemdAtInvalidIndex_thenException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayListTest.whenItemAddedAtInvalidIndex_thenException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="collections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="training.java.collections.list.arraylist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="training.java.collections.list.arraylist" />
+      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.arraylist.ArrayListTest" />
+      <option name="METHOD_NAME" value="whenItemAddedAtInvalidIndex_thenException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayListTest.whenNullItemAdded_thenException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="collections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="training.java.collections.list.arraylist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="training.java.collections.list.arraylist" />
+      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.arraylist.ArrayListTest" />
+      <option name="METHOD_NAME" value="whenNullItemAdded_thenException" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -88,68 +142,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListTest.whenIterate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="collections" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="training.java.collections.list.linkedlist.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="training.java.collections.list.linkedlist" />
-      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.linkedlist.LinkedListTest" />
-      <option name="METHOD_NAME" value="whenIterate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LinkedListTest.whenListIsCreated_thenSizeZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="collections" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="training.java.collections.list.linkedlist.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="training.java.collections.list.linkedlist" />
-      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.linkedlist.LinkedListTest" />
-      <option name="METHOD_NAME" value="whenListIsCreated_thenSizeZero" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LinkedListTest.whenOutOfIndex_thenException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="collections" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="training.java.collections.list.linkedlist.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="training.java.collections.list.linkedlist" />
-      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.linkedlist.LinkedListTest" />
-      <option name="METHOD_NAME" value="whenOutOfIndex_thenException" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.Main (1)" />
-      <item itemvalue="JUnit.LinkedListTest.whenListIsCreated_thenSizeZero" />
+      <item itemvalue="JUnit.ArrayListTest.whenItemAddedAtInvalidIndex_thenException" />
+      <item itemvalue="JUnit.ArrayListTest.whenGettingItemdAtInvalidIndex_thenException" />
+      <item itemvalue="JUnit.ArrayListTest" />
+      <item itemvalue="JUnit.ArrayListTest.whenNullItemAdded_thenException" />
       <item itemvalue="JUnit.LinkedListTest" />
-      <item itemvalue="JUnit.LinkedListTest.whenOutOfIndex_thenException" />
-      <item itemvalue="JUnit.LinkedListTest.whenIterate" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LinkedListTest.whenIterate" />
-        <item itemvalue="JUnit.LinkedListTest.whenOutOfIndex_thenException" />
         <item itemvalue="JUnit.LinkedListTest" />
-        <item itemvalue="JUnit.LinkedListTest.whenListIsCreated_thenSizeZero" />
-        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="JUnit.ArrayListTest" />
+        <item itemvalue="JUnit.ArrayListTest.whenNullItemAdded_thenException" />
+        <item itemvalue="JUnit.ArrayListTest.whenItemAddedAtInvalidIndex_thenException" />
+        <item itemvalue="JUnit.ArrayListTest.whenGettingItemdAtInvalidIndex_thenException" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +171,7 @@
       <updated>1659650901815</updated>
       <workItem from="1659650909700" duration="12399000" />
       <workItem from="1660255526837" duration="3565000" />
-      <workItem from="1660610110118" duration="7158000" />
+      <workItem from="1660610110118" duration="11757000" />
     </task>
     <servers />
   </component>
@@ -186,8 +192,11 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/collections$LinkedListTest.ic" NAME="LinkedListTest Coverage Results" MODIFIED="1660258674609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/collections$LinkedListTest.ic" NAME="LinkedListTest Coverage Results" MODIFIED="1660970359828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>training.java.collections.list.linkedlist.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/collections$ArrayListTest.ic" NAME="ArrayListTest Coverage Results" MODIFIED="1660970201370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>training.java.collections.list.arraylist.*</FILTER>
     </SUITE>
   </component>
 </project>
