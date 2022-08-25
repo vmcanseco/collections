@@ -142,9 +142,9 @@ public class LinkedListTest {
         list.setAt(1,"Two");
 
         //then
+        Assertions.assertEquals("One",list.getAt(0));
         Assertions.assertEquals("Two",list.getAt(1));
-        Assertions.assertEquals("Three",list.getAt(2));
-        Assertions.assertEquals("Four",list.getAt(3));
+        Assertions.assertEquals("Four",list.getAt(2));
     }
 
     @Test
@@ -158,7 +158,6 @@ public class LinkedListTest {
 
         //then
         Assertions.assertEquals("One", list.getAt(0));
-        Assertions.assertEquals("Two", list.getAt(1));
     }
 
 

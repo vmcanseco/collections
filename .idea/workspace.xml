@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6e54e5b-82d4-4463-8f0d-3bc4d43562f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/training/java/collections/list/BaseList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/training/java/collections/list/exceptions/NotNullValueAllowedException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/IList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/IList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/arraylist/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/arraylist/ArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/training/java/collections/list/arraylist/ArrayListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/training/java/collections/list/arraylist/ArrayListTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/training/java/collections/list/linkedlist/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/training/java/collections/list/linkedlist/LinkedListTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="85" />
+    <option name="myElementSize" value="61" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="collections" />
@@ -63,7 +58,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LinkedListTest">
+  <component name="RunManager" selected="JUnit.ArrayListTest">
     <configuration name="ArrayListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="collections" />
       <extension name="coverage">
@@ -151,8 +146,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LinkedListTest" />
         <item itemvalue="JUnit.ArrayListTest" />
+        <item itemvalue="JUnit.LinkedListTest" />
         <item itemvalue="JUnit.ArrayListTest.whenNullItemAdded_thenException" />
         <item itemvalue="JUnit.ArrayListTest.whenItemAddedAtInvalidIndex_thenException" />
         <item itemvalue="JUnit.ArrayListTest.whenGettingItemdAtInvalidIndex_thenException" />
@@ -171,7 +166,8 @@
       <updated>1659650901815</updated>
       <workItem from="1659650909700" duration="12399000" />
       <workItem from="1660255526837" duration="3565000" />
-      <workItem from="1660610110118" duration="11757000" />
+      <workItem from="1660610110118" duration="12084000" />
+      <workItem from="1661393607899" duration="443000" />
     </task>
     <servers />
   </component>
@@ -192,10 +188,10 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/collections$LinkedListTest.ic" NAME="LinkedListTest Coverage Results" MODIFIED="1660970359828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/collections$LinkedListTest.ic" NAME="LinkedListTest Coverage Results" MODIFIED="1661394141683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>training.java.collections.list.linkedlist.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/collections$ArrayListTest.ic" NAME="ArrayListTest Coverage Results" MODIFIED="1660970201370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/collections$ArrayListTest.ic" NAME="ArrayListTest Coverage Results" MODIFIED="1661394151345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>training.java.collections.list.arraylist.*</FILTER>
     </SUITE>
   </component>

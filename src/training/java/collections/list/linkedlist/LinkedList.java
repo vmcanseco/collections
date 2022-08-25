@@ -88,6 +88,21 @@ public class LinkedList extends BaseList implements IList {
         validateBounds(index);
         int iteration = 0;
         Node current = this.head;
+        while (current != null) {
+            if (iteration == index) {
+                current.data = element;
+            }
+            current = current.next;
+            iteration++;
+        }
+
+    }
+
+    /*public void setAt(int index, String element) {
+        checkNullValue(element);
+        validateBounds(index);
+        int iteration = 0;
+        Node current = this.head;
         Node tmp = new Node();
         tmp.data = element;
         Node previous = null;
@@ -113,7 +128,7 @@ public class LinkedList extends BaseList implements IList {
             iteration++;
         }
         this.size++;
-    }
+    }*/
 
     @Override
     public void removeAt(int index) {
