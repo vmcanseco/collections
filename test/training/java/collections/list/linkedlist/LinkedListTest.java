@@ -2,6 +2,7 @@ package training.java.collections.list.linkedlist;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import training.java.collections.list.IIterator;
 import training.java.collections.list.IList;
 import training.java.collections.list.arraylist.ArrayList;
 
@@ -176,5 +177,49 @@ public class LinkedListTest {
         }
     }
 
+
+    @Test
+    void whenMultipleItemsAddedAtIndex_thenIterate() throws Exception {
+        //given
+        IList<String> list = new LinkedList<>();
+        list.add("One");
+        list.add("Three");
+        list.add("Four");
+
+
+        //when
+        IIterator<String> iterator = list.iterator();
+
+        //then
+        Assertions.assertTrue(iterator.hasNext());
+        Assertions.assertEquals("One",iterator.next());
+        Assertions.assertTrue(iterator.hasNext());
+        Assertions.assertEquals("Three",iterator.next());
+        Assertions.assertTrue(iterator.hasNext());
+        Assertions.assertEquals("Four",iterator.next());
+        Assertions.assertFalse(iterator.hasNext());
+    }
+
+    @Test
+    void whenMultipleItemsAddedAtIndex_thenReverseIterate() throws Exception {
+        //given
+        IList<String> list = new LinkedList<>();
+        list.add("One");
+        list.add("Three");
+        list.add("Four");
+
+
+        //when
+        IIterator<String> iterator = list.reverseIterator();
+
+        //then
+        Assertions.assertTrue(iterator.hasNext());
+        Assertions.assertEquals("Four",iterator.next());
+        Assertions.assertTrue(iterator.hasNext());
+        Assertions.assertEquals("Three",iterator.next());
+        Assertions.assertTrue(iterator.hasNext());
+        Assertions.assertEquals("One",iterator.next());
+        Assertions.assertFalse(iterator.hasNext());
+    }
 
 }

@@ -1,12 +1,13 @@
 package training.java.collections.list.linkedlist;
 
 import training.java.collections.list.BaseList;
+import training.java.collections.list.IIterator;
 import training.java.collections.list.IList;
 
-public class LinkedList extends BaseList implements IList {
+public class LinkedList<H> extends BaseList<H> implements IList<H> {
 
-    private Node head;
-    private Node last;
+    private Node<H> head;
+    private Node<H> last;
 
 
     public LinkedList() {
@@ -14,9 +15,9 @@ public class LinkedList extends BaseList implements IList {
     }
 
     @Override
-    public void add(String element) {
+    public void add(H element) {
         checkNullValue(element);
-        Node tmp = new Node();
+        Node<H> tmp = new Node<>();
         tmp.data = element;
         if (head == null) {
             this.head = tmp;
@@ -48,7 +49,7 @@ public class LinkedList extends BaseList implements IList {
 
 
     @Override
-    public boolean contains(String element) {
+    public boolean contains(H element) {
         checkNullValue(element);
         boolean found = false;
 
@@ -65,12 +66,12 @@ public class LinkedList extends BaseList implements IList {
     }
 
     @Override
-    public String getAt(int index) {
+    public H getAt(int index) {
         validateBounds(index);
 
         int iteration = 0;
-        Node tmp = head;
-        String element = null;
+        Node<H> tmp = head;
+        H element = null;
         while (tmp != null) {
             if (iteration == index) {
                 element = tmp.data;
@@ -83,11 +84,11 @@ public class LinkedList extends BaseList implements IList {
     }
 
     @Override
-    public void setAt(int index, String element) {
+    public void setAt(int index, H element) {
         checkNullValue(element);
         validateBounds(index);
         int iteration = 0;
-        Node current = this.head;
+        Node<H> current = this.head;
         while (current != null) {
             if (iteration == index) {
                 current.data = element;
@@ -135,14 +136,14 @@ public class LinkedList extends BaseList implements IList {
         validateBounds(index);
 
         int iteration = 0;
-        Node current = this.head;
-        Node previous = null;
+        Node<H> current = this.head;
+        Node<H> previous = null;
 
         while (current != null) {
 
             if (iteration == index) {
                 if (previous != null) {
-                    Node next = current.next;
+                    Node<H> next = current.next;
                     previous.next = next;
                     if (next != null) {
                         next.previous = previous;
@@ -167,6 +168,17 @@ public class LinkedList extends BaseList implements IList {
     @Override
     public int getSize() {
         return this.size + 1;
+    }
+
+    @Override
+    public IIterator<H> iterator() {
+        return new LinkedListIterator<>(this);
+    }
+
+    @Override
+    public IIterator<H> reverseIterator() {
+
+        return new LinkedListReverseIterator<>(this);
     }
 
 

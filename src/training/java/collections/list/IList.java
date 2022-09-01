@@ -1,20 +1,19 @@
 package training.java.collections.list;
 
-import training.java.collections.list.exceptions.NotNullValueAllowedException;
+public interface IList<T> {
+    void add(T element);
 
-public interface IList {
-    void add(String element);
+    boolean contains(T element);
 
-    boolean contains(String element);
+    T getAt(int index);
 
-    String getAt(int index);
-
-    void setAt(int index, String element);
+    void setAt(int index, T element);
 
     void removeAt(int index);
 
     int getSize();
 
+    IIterator<T> iterator();
 
-
+    IIterator<T> reverseIterator();
 }

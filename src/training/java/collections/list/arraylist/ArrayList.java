@@ -1,25 +1,26 @@
 package training.java.collections.list.arraylist;
 
 import training.java.collections.list.BaseList;
+import training.java.collections.list.IIterator;
 import training.java.collections.list.IList;
 
-public class ArrayList extends BaseList implements IList {
+public class ArrayList<H> extends BaseList<H> implements IList<H> {
     private int maxCapacity = 2;
-    private String[] data;
+    private H[] data;
 
     ArrayList() {
-        data = new String[maxCapacity];
+        data = (H[])new Object[maxCapacity];
     }
 
 
     @Override
-    public void add(String element) {
+    public void add(H element) {
         checkNullValue(element);
         if (size == maxCapacity) {
             maxCapacity *= 2;
-            String[] tmp = new String[maxCapacity];
+            H[] tmp = (H[]) new Object[maxCapacity];
             int idx = 0;
-            for (String value : data) {
+            for (H value : data) {
                 tmp[idx] = value;
                 idx++;
             }
@@ -31,10 +32,10 @@ public class ArrayList extends BaseList implements IList {
     }
 
     @Override
-    public boolean contains(String element) {
+    public boolean contains(H element) {
         checkNullValue(element);
         boolean found = false;
-        for (String value : data) {
+        for (H value : data) {
             if (value == null) {
                 break;
             } else if (value.equals(element)) {
@@ -46,13 +47,13 @@ public class ArrayList extends BaseList implements IList {
     }
 
     @Override
-    public String getAt(int index) {
+    public H getAt(int index) {
         validateBounds(index);
         return data[index];
     }
 
     @Override
-    public void setAt(int index, String element) {
+    public void setAt(int index, H element) {
         checkNullValue(element);
         validateBounds(index);
         data[index] = element;
@@ -74,7 +75,7 @@ public class ArrayList extends BaseList implements IList {
     @Override
     public void removeAt(int index) {
         validateBounds(index);
-        String[] tmp = new String[maxCapacity];
+        H[] tmp = (H[])new Object[maxCapacity];
         for (int idxTmp = 0, idxData = 0; idxData < size; ) {
             if (idxData != index) {
                 tmp[idxTmp] = data[idxData];
@@ -92,6 +93,16 @@ public class ArrayList extends BaseList implements IList {
     @Override
     public int getSize() {
         return size;
+    }
+
+    @Override
+    public IIterator<H> iterator() {
+        return null;
+    }
+
+    @Override
+    public IIterator<H> reverseIterator() {
+        return null;
     }
 
 
