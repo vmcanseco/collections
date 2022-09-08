@@ -31,22 +31,6 @@ public class LinkedList<H> extends BaseList<H> implements IList<H> {
         this.size++;
     }
 
-    /*public void iterate(){
-        Node tmp = this.head;
-        while (tmp!=null){
-            System.out.println("-------------------------");
-            System.out.println("Current : "+tmp.data);
-            if (tmp.previous!=null){
-                System.out.println("Previous : "+tmp.previous.data);
-            }
-            if (tmp.next!=null){
-                System.out.println("Next : "+tmp.next.data);
-            }
-            System.out.println("-------------------------");
-            tmp=tmp.next;
-        }
-    }*/
-
 
     @Override
     public boolean contains(H element) {
@@ -64,6 +48,8 @@ public class LinkedList<H> extends BaseList<H> implements IList<H> {
 
         return found;
     }
+
+
 
     @Override
     public H getAt(int index) {
@@ -167,18 +153,52 @@ public class LinkedList<H> extends BaseList<H> implements IList<H> {
 
     @Override
     public int getSize() {
-        return this.size + 1;
+        return size + 1;
+    }
+
+    @Override
+    public int indexOf(H element) {
+        checkNullValue(element);
+        int index=0;
+
+        Node tmp = this.head;
+        while (tmp != null) {
+            if (tmp.data.equals(element)) {
+                break;
+            }
+            index++;
+            tmp = tmp.next;
+        }
+
+        return index == size ? -1:index;
     }
 
     @Override
     public IIterator<H> iterator() {
-        return new LinkedListIterator<>(this);
+        return new LinkedListIterator3();
+    }
+
+    public IIterator<H> iteratorAnonymousClass() {
+        return new IIterator<H>() {
+            private Node<H> currentNode=head;
+            @Override
+            public boolean hasNext() {
+                return currentNode!=null;
+            }
+
+            @Override
+            public H next() {
+                H element = currentNode.data;
+                currentNode=currentNode.next;
+                return element;
+            }
+        };
     }
 
     @Override
     public IIterator<H> reverseIterator() {
 
-        return new LinkedListReverseIterator<>(this);
+        return new LinkedListReverseIterator<>(last);
     }
 
 
@@ -189,5 +209,47 @@ public class LinkedList<H> extends BaseList<H> implements IList<H> {
         }
     }
 
+
+    public static class LinkedListIterator2<H> implements IIterator<H> {
+
+        private Node<H> currentNode;
+
+        public LinkedListIterator2(Node<H> head){
+            currentNode = head;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return currentNode!=null;
+        }
+
+        @Override
+        public H next() {
+            H element = currentNode.data;
+            currentNode=currentNode.next;
+            return element;
+        }
+    }
+
+    public class LinkedListIterator3 implements IIterator<H> {
+
+        private Node<H> currentNode;
+
+        public LinkedListIterator3(){
+            currentNode = head;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return currentNode!=null;
+        }
+
+        @Override
+        public H next() {
+            H element = currentNode.data;
+            currentNode=currentNode.next;
+            return element;
+        }
+    }
 
 }

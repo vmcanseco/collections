@@ -3,13 +3,20 @@ package training.java.collections.list.arraylist;
 import training.java.collections.list.BaseList;
 import training.java.collections.list.IIterator;
 import training.java.collections.list.IList;
+import training.java.collections.list.linkedlist.LinkedList;
 
 public class ArrayList<H> extends BaseList<H> implements IList<H> {
-    private int maxCapacity = 2;
+    private int maxCapacity;
     private H[] data;
 
-    ArrayList() {
+    public ArrayList(int capacity){
+        maxCapacity=capacity;
         data = (H[])new Object[maxCapacity];
+
+    }
+
+    public ArrayList() {
+        this(2);
     }
 
 
@@ -45,6 +52,7 @@ public class ArrayList<H> extends BaseList<H> implements IList<H> {
         }
         return found;
     }
+
 
     @Override
     public H getAt(int index) {
@@ -96,12 +104,20 @@ public class ArrayList<H> extends BaseList<H> implements IList<H> {
     }
 
     @Override
+    public int indexOf(H element) {
+        return 0;
+    }
+
+    @Override
     public IIterator<H> iterator() {
         return null;
     }
 
     @Override
     public IIterator<H> reverseIterator() {
+        LinkedList<String> a = new LinkedList<>();
+        LinkedList.LinkedListIterator2<String> b = new LinkedList.LinkedListIterator2<>(null);
+        LinkedList.LinkedListIterator3 c = a.new LinkedListIterator3();
         return null;
     }
 

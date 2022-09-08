@@ -1,26 +1,24 @@
 package training.java.collections.list.linkedlist;
 
 import training.java.collections.list.IIterator;
-import training.java.collections.list.IList;
 
-public class LinkedListIterator<H> implements IIterator<H> {
+ class LinkedListIterator<H> implements IIterator<H> {
 
-    private IList<H> linkedList;
-    private int current = 0;
+    private Node<H> currentNode;
 
-    LinkedListIterator(IList<H> linkedList){
-        this.linkedList = linkedList;
+    LinkedListIterator(Node<H> head){
+        currentNode = head;
     }
 
     @Override
     public boolean hasNext() {
-        return this.linkedList.getSize()>current;
+        return currentNode!=null;
     }
 
     @Override
     public H next() {
-        H element = this.linkedList.getAt(current);
-        current++;
+        H element = currentNode.data;
+        currentNode=currentNode.next;
         return element;
     }
 }

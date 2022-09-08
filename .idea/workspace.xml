@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6e54e5b-82d4-4463-8f0d-3bc4d43562f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/training/java/collections/list/IIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedListIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedListReverseIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/training/java/collections/list/hashset/HashSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/training/java/collections/list/hashset/ISet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/BaseList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/BaseList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/IList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/IList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/arraylist/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/arraylist/ArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/training/java/collections/list/linkedlist/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/training/java/collections/list/linkedlist/LinkedListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedListIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedListIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedListReverseIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedListReverseIterator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +48,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="training.java.collections.list.hashset" />
       <recent name="training.java.collections.list.exceptions" />
     </key>
   </component>
@@ -66,7 +64,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LinkedListTest.whenMultipleItemsAddedAtIndex_thenReverseIterate">
+  <component name="RunManager" selected="JUnit.LinkedListTest">
+    <configuration name="LinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="collections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="training.java.collections.list.linkedlist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="training.java.collections.list.linkedlist" />
+      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.linkedlist.LinkedListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LinkedListTest.whenItemAddedAtIndex_thenArrayOffset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="collections" />
       <extension name="coverage">
@@ -131,34 +144,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="training.java.collections.list in collections" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="collections" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="training.java.collections.list.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="training.java.collections.list" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.training.java.collections.list in collections" />
       <item itemvalue="JUnit.LinkedListTest.whenMultipleItemsAddedAtIndex_thenArrayOffset" />
       <item itemvalue="JUnit.LinkedListTest.whenItemAddedAtZeroIndex_thenHeadChanges" />
       <item itemvalue="JUnit.LinkedListTest.whenItemAddedAtIndex_thenArrayOffset" />
       <item itemvalue="JUnit.LinkedListTest.whenMultipleItemsAddedAtIndex_thenReverseIterate" />
+      <item itemvalue="JUnit.LinkedListTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LinkedListTest" />
         <item itemvalue="JUnit.LinkedListTest.whenMultipleItemsAddedAtIndex_thenReverseIterate" />
         <item itemvalue="JUnit.LinkedListTest.whenMultipleItemsAddedAtIndex_thenArrayOffset" />
         <item itemvalue="JUnit.LinkedListTest.whenItemAddedAtIndex_thenArrayOffset" />
         <item itemvalue="JUnit.LinkedListTest.whenItemAddedAtZeroIndex_thenHeadChanges" />
-        <item itemvalue="JUnit.training.java.collections.list in collections" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +176,8 @@
       <workItem from="1660610110118" duration="12084000" />
       <workItem from="1661393607899" duration="1000000" />
       <workItem from="1661811873219" duration="5183000" />
-      <workItem from="1662068924691" duration="1360000" />
+      <workItem from="1662068924691" duration="4602000" />
+      <workItem from="1662597780202" duration="5836000" />
     </task>
     <servers />
   </component>
@@ -197,19 +197,8 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/test/training/java/collections/list/linkedlist/LinkedListTest.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/collections$LinkedListTest.ic" NAME="LinkedListTest Coverage Results" MODIFIED="1661394141683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/collections$LinkedListTest.ic" NAME="LinkedListTest Coverage Results" MODIFIED="1662070555895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>training.java.collections.list.linkedlist.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/collections$ArrayListTest.ic" NAME="ArrayListTest Coverage Results" MODIFIED="1661812031265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

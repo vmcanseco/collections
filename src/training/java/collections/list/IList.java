@@ -13,6 +13,8 @@ public interface IList<T> {
 
     int getSize();
 
+    int  indexOf(T element);
+
     IIterator<T> iterator();
 
     IIterator<T> reverseIterator();
