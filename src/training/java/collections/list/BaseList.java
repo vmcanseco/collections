@@ -11,7 +11,7 @@ public class BaseList<T> {
     }
 
     protected void validateBounds(int index) {
-        if (index > this.size) {
+        if (index > size) {
             throw new IndexOutOfBoundsException(String.format("Index out of range {%d}", index));
         }
     }

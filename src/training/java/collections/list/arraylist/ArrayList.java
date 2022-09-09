@@ -100,7 +100,7 @@ public class ArrayList<H> extends BaseList<H> implements IList<H> {
 
     @Override
     public int getSize() {
-        return size;
+        return maxCapacity;
     }
 
     @Override
@@ -121,5 +121,10 @@ public class ArrayList<H> extends BaseList<H> implements IList<H> {
         return null;
     }
 
-
+    @Override
+    protected void validateBounds(int index) {
+        if (index > maxCapacity) {
+            throw new IndexOutOfBoundsException(String.format("Index out of range {%d}", index));
+        }
+    }
 }

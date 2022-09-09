@@ -65,24 +65,42 @@ public class HashSet<H> implements ISet<H> {
 
     @Override
     public IIterator<H> iterator() {
-        return new HashSetIterator<>(bucket);
+        return new HashSetIterator<H>(bucket);
     }
 
     private class HashSetIterator<H> implements IIterator<H>{
 
-        private  ArrayList<H> bucket;
-        HashSetIterator(ArrayList<H> bucket){
+        private  ArrayList<LinkedList<H>> bucket;
+        HashSetIterator(ArrayList<LinkedList<H>> bucket){
             this.bucket = bucket;
         }
+        IIterator currentIterator;
+        int currentBucketSlot;
 
         @Override
         public boolean hasNext() {
-            return false;
+            boolean hasNext=false;
+                for(int index=currentBucketSlot;index<bucket.getSize();index++){
+                    if (bucket.getAt(index)!=null){
+                        currentIterator = bucket.getAt(index).iterator();
+                        break;
+                    }
+                }
+
+            if (currentIterator!=null){
+                hasNext = currentIterator.hasNext();
+                if (!hasNext){
+                    currentIterator=null;
+                    hasNext();
+                }
+            }
+
+            return hasNext;
         }
 
         @Override
         public H next() {
-            return null;
+            return (H)currentIterator.next();
         }
     }
 
