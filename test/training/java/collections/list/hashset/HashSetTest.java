@@ -22,4 +22,46 @@ public class HashSetTest {
         Assertions.assertTrue(iterator.hasNext());
         Assertions.assertEquals("One",iterator.next());
     }
+
+    @Test
+    public void whenItemAdded_thenOnlyOneNext(){
+        ISet<String> hashSet = new HashSet<>();
+        hashSet.add("One");
+
+        IIterator<String> iterator = hashSet.iterator();
+        Assertions.assertTrue(iterator.hasNext());
+        Assertions.assertFalse(iterator.hasNext());
+    }
+
+    @Test
+    public void whenItemAdded_thenElementFound(){
+        ISet<String> hashSet = new HashSet<>();
+        hashSet.add("One");
+
+        Assertions.assertTrue(hashSet.contains("One"));
+
+    }
+
+    @Test
+    public void whenNoItemAdded_thenElementNotFound(){
+        ISet<String> hashSet = new HashSet<>();
+        hashSet.add("One");
+
+        Assertions.assertFalse(hashSet.contains("Two"));
+
+    }
+
+    @Test
+    public void whenItemRemoved_thenTrue(){
+        String value="One";
+        System.out.println(value.hashCode());
+        ISet<String> hashSet = new HashSet<>();
+        hashSet.add(value);
+
+        boolean removed=hashSet.remove(value);
+        Assertions.assertTrue(removed);
+        //System.out.println(hashSet.getSize());
+        Assertions.assertEquals(0,hashSet.getSize());
+
+    }
 }

@@ -170,7 +170,7 @@ public class LinkedList<H> extends BaseList<H> implements IList<H> {
             tmp = tmp.next;
         }
 
-        return index == size ? -1:index;
+        return index == getSize() ? -1:index;
     }
 
     @Override

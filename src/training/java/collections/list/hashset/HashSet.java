@@ -1,40 +1,68 @@
 package training.java.collections.list.hashset;
 
 import training.java.collections.list.IIterator;
-import training.java.collections.list.arraylist.ArrayList;
 import training.java.collections.list.linkedlist.LinkedList;
 
 public class HashSet<H> implements ISet<H> {
-    private ArrayList<LinkedList<H>> bucket;
     private int size;
+    private final int LOAD_FACTOR = 5;
+    private LinkedList<H>[] buckets;
 
-    HashSet(){
-        bucket=new ArrayList<>(16);
-
+    public HashSet() {
+        buckets =  new LinkedList[16];
     }
 
-    public void add(H  element){
-        int index=element.hashCode() %  bucket.getSize();
-        LinkedList<H> linkedList = bucket.getAt(index);
-        if (linkedList==null){
-            linkedList=new LinkedList<>();
+
+    public void add(H element) {
+
+        int index = element.hashCode() % buckets.length;
+        LinkedList<H> linkedList = buckets[index];//bucket.getAt(index);
+        if (linkedList == null) {
+            linkedList = new LinkedList<>();
             linkedList.add(element);
-            bucket.setAt(index,linkedList);
+            buckets[index] = linkedList;
             size++;
-        }else {
+        } else {
             if (!linkedList.contains(element)) {
                 linkedList.add(element);
                 size++;
             }
         }
+
+        if (linkedList.getSize() == LOAD_FACTOR) {
+            redistributeBuckets();
+        }
+
+    }
+
+    private void redistributeBuckets() {
+        IIterator<H> iterator = iterator();
+        LinkedList<H> tempBuckets[] = (LinkedList<H>[]) new Object[buckets.length * 2];
+
+        while (iterator.hasNext()) {
+            H element = iterator.next();
+
+            int index = element.hashCode() % tempBuckets.length;
+
+            LinkedList<H> linkedList = tempBuckets[index];
+            if (linkedList == null) {
+                linkedList = new LinkedList<>();
+                tempBuckets[index] = linkedList;
+            }
+            linkedList.add(element);
+
+        }
+        buckets = tempBuckets;
+
+
     }
 
     @Override
     public boolean contains(H element) {
-        boolean exists=false;
-        int index=element.hashCode() %  bucket.getSize();
-        LinkedList<H> linkedList = bucket.getAt(index);
-        if (linkedList!=null){
+        boolean exists = false;
+        int index = element.hashCode() % buckets.length;
+        LinkedList<H> linkedList = buckets[index];
+        if (linkedList != null) {
             exists = linkedList.contains(element);
         }
         return exists;
@@ -42,19 +70,19 @@ public class HashSet<H> implements ISet<H> {
 
     @Override
     public boolean remove(H element) {
-        boolean removed=false;
-        int index=element.hashCode() %  bucket.getSize();
-        LinkedList<H> linkedList = bucket.getAt(index);
-        if (linkedList!=null){
+        boolean removed = false;
+        int index = element.hashCode() % buckets.length;
+        LinkedList<H> linkedList = buckets[index];
+        if (linkedList != null) {
             int elementAt = linkedList.indexOf(element);
-            if (elementAt!=-1){
+            if (elementAt != -1) {
                 linkedList.removeAt(elementAt);
-                removed=true;
-                size--;
+                removed = true;
+                size-=1;
             }
         }
 
-        return  removed;
+        return removed;
 
     }
 
@@ -65,34 +93,48 @@ public class HashSet<H> implements ISet<H> {
 
     @Override
     public IIterator<H> iterator() {
-        return new HashSetIterator<H>(bucket);
+        return new HashSetIterator();
     }
 
-    private class HashSetIterator<H> implements IIterator<H>{
+    private class HashSetIterator implements IIterator<H> {
 
-        private  ArrayList<LinkedList<H>> bucket;
-        HashSetIterator(ArrayList<LinkedList<H>> bucket){
-            this.bucket = bucket;
+        IIterator<H> currentIterator;
+        int currentBucketSlot = -1;
+
+        private IIterator<H> getNextIterator() {
+
+            IIterator<H> tmp = null;
+            for (currentBucketSlot += 1; currentBucketSlot < buckets.length; currentBucketSlot += 1) {
+                if (buckets[currentBucketSlot] != null) {
+                    tmp = buckets[currentBucketSlot].iterator();
+                    break;
+                }
+            }
+
+            return tmp;
+
         }
-        IIterator currentIterator;
-        int currentBucketSlot;
 
         @Override
         public boolean hasNext() {
-            boolean hasNext=false;
-                for(int index=currentBucketSlot;index<bucket.getSize();index++){
-                    if (bucket.getAt(index)!=null){
-                        currentIterator = bucket.getAt(index).iterator();
-                        break;
-                    }
+            boolean hasNext = false;
+
+            currentIterator = getNextIterator();
+
+            while (currentBucketSlot < buckets.length && !hasNext) {
+
+                //if (currentIterator != null) {
+                if (currentIterator.hasNext()) {
+                    hasNext = true;
+                } else {
+                    currentIterator = getNextIterator();
                 }
 
-            if (currentIterator!=null){
-                hasNext = currentIterator.hasNext();
-                if (!hasNext){
-                    currentIterator=null;
-                    hasNext();
-                }
+                /*} else {
+                    currentIterator = getNextIterator();
+                }*/
+
+
             }
 
             return hasNext;
@@ -100,10 +142,9 @@ public class HashSet<H> implements ISet<H> {
 
         @Override
         public H next() {
-            return (H)currentIterator.next();
+            return currentIterator.next();
         }
     }
-
 
 
 }

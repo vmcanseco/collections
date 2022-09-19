@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6e54e5b-82d4-4463-8f0d-3bc4d43562f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/training/java/collections/list/hashset/HashSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/training/java/collections/list/hashset/ISet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/IList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/IList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/arraylist/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/arraylist/ArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/hashset/HashSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/hashset/HashSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedListIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedListIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedListReverseIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedListReverseIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/training/java/collections/list/hashset/HashSetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/training/java/collections/list/hashset/HashSetTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +42,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/training/java/collections/list" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.45402297" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -64,100 +64,94 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LinkedListTest">
-    <configuration name="LinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.HashSetTest">
+    <configuration name="ide-scripting" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <setting name="path" value="file://$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$APPLICATION_CONFIG_DIR$/consoles/ide" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HashSetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="collections" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="training.java.collections.list.linkedlist.*" />
+          <option name="PATTERN" value="training.java.collections.list.hashset.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="training.java.collections.list.linkedlist" />
-      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.linkedlist.LinkedListTest" />
+      <option name="PACKAGE_NAME" value="training.java.collections.list.hashset" />
+      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.hashset.HashSetTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListTest.whenItemAddedAtIndex_thenArrayOffset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HashSetTest.whenItemAdded_thenElementFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="collections" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="training.java.collections.list.linkedlist.*" />
+          <option name="PATTERN" value="training.java.collections.list.hashset.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="training.java.collections.list.linkedlist" />
-      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.linkedlist.LinkedListTest" />
-      <option name="METHOD_NAME" value="whenItemAddedAtIndex_thenArrayOffset" />
+      <option name="PACKAGE_NAME" value="training.java.collections.list.hashset" />
+      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.hashset.HashSetTest" />
+      <option name="METHOD_NAME" value="whenItemAdded_thenElementFound" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListTest.whenItemAddedAtZeroIndex_thenHeadChanges" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HashSetTest.whenItemRemoved_thenTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="collections" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="training.java.collections.list.linkedlist.*" />
+          <option name="PATTERN" value="training.java.collections.list.hashset.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="training.java.collections.list.linkedlist" />
-      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.linkedlist.LinkedListTest" />
-      <option name="METHOD_NAME" value="whenItemAddedAtZeroIndex_thenHeadChanges" />
+      <option name="PACKAGE_NAME" value="training.java.collections.list.hashset" />
+      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.hashset.HashSetTest" />
+      <option name="METHOD_NAME" value="whenItemRemoved_thenTrue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListTest.whenMultipleItemsAddedAtIndex_thenArrayOffset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HashSetTest.whenNoItemAdded_thenElementNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="collections" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="training.java.collections.list.linkedlist.*" />
+          <option name="PATTERN" value="training.java.collections.list.hashset.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="training.java.collections.list.linkedlist" />
-      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.linkedlist.LinkedListTest" />
-      <option name="METHOD_NAME" value="whenMultipleItemsAddedAtIndex_thenArrayOffset" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LinkedListTest.whenMultipleItemsAddedAtIndex_thenReverseIterate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="collections" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="training.java.collections.list.linkedlist.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="training.java.collections.list.linkedlist" />
-      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.linkedlist.LinkedListTest" />
-      <option name="METHOD_NAME" value="whenMultipleItemsAddedAtIndex_thenReverseIterate" />
+      <option name="PACKAGE_NAME" value="training.java.collections.list.hashset" />
+      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.hashset.HashSetTest" />
+      <option name="METHOD_NAME" value="whenNoItemAdded_thenElementNotFound" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.LinkedListTest.whenMultipleItemsAddedAtIndex_thenArrayOffset" />
-      <item itemvalue="JUnit.LinkedListTest.whenItemAddedAtZeroIndex_thenHeadChanges" />
-      <item itemvalue="JUnit.LinkedListTest.whenItemAddedAtIndex_thenArrayOffset" />
-      <item itemvalue="JUnit.LinkedListTest.whenMultipleItemsAddedAtIndex_thenReverseIterate" />
-      <item itemvalue="JUnit.LinkedListTest" />
+      <item itemvalue="Groovy.ide-scripting" />
+      <item itemvalue="JUnit.HashSetTest.whenItemAdded_thenElementFound" />
+      <item itemvalue="JUnit.HashSetTest.whenNoItemAdded_thenElementNotFound" />
+      <item itemvalue="JUnit.HashSetTest.whenItemRemoved_thenTrue" />
+      <item itemvalue="JUnit.HashSetTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LinkedListTest" />
-        <item itemvalue="JUnit.LinkedListTest.whenMultipleItemsAddedAtIndex_thenReverseIterate" />
-        <item itemvalue="JUnit.LinkedListTest.whenMultipleItemsAddedAtIndex_thenArrayOffset" />
-        <item itemvalue="JUnit.LinkedListTest.whenItemAddedAtIndex_thenArrayOffset" />
-        <item itemvalue="JUnit.LinkedListTest.whenItemAddedAtZeroIndex_thenHeadChanges" />
+        <item itemvalue="JUnit.HashSetTest" />
+        <item itemvalue="JUnit.HashSetTest.whenItemRemoved_thenTrue" />
+        <item itemvalue="JUnit.HashSetTest.whenNoItemAdded_thenElementNotFound" />
+        <item itemvalue="JUnit.HashSetTest.whenItemAdded_thenElementFound" />
+        <item itemvalue="Groovy.ide-scripting" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +171,10 @@
       <workItem from="1661393607899" duration="1000000" />
       <workItem from="1661811873219" duration="5183000" />
       <workItem from="1662068924691" duration="4602000" />
-      <workItem from="1662597780202" duration="5836000" />
+      <workItem from="1662597780202" duration="14866000" />
+      <workItem from="1663542548543" duration="2654000" />
+      <workItem from="1663545347888" duration="112000" />
+      <workItem from="1663545560393" duration="1679000" />
     </task>
     <servers />
   </component>
@@ -197,12 +194,31 @@
       </map>
     </option>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/training/java/collections/list/hashset/HashSetTest.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedList.java</url>
+          <line>161</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/collections$LinkedListTest.ic" NAME="LinkedListTest Coverage Results" MODIFIED="1662070555895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>training.java.collections.list.linkedlist.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/collections$ArrayListTest.ic" NAME="ArrayListTest Coverage Results" MODIFIED="1661812031265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>training.java.collections.list.arraylist.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/collections$HashSetTest.ic" NAME="HashSetTest Coverage Results" MODIFIED="1663547274667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>training.java.collections.list.hashset.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/collections$training_java_collections_list_in_collections.ic" NAME="training.java.collections.list in collections Coverage Results" MODIFIED="1661812126127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>training.java.collections.list.*</FILTER>
