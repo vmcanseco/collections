@@ -5,11 +5,11 @@ import training.java.collections.list.linkedlist.LinkedList;
 
 public class HashSet<H> implements ISet<H> {
     private int size;
-    private final int LOAD_FACTOR = 5;
+    private static final int LOAD_FACTOR = 5;
     private LinkedList<H>[] buckets;
 
     public HashSet() {
-        buckets =  new LinkedList[16];
+        buckets = (LinkedList<H>[]) new Object[16];
     }
 
 
@@ -78,7 +78,7 @@ public class HashSet<H> implements ISet<H> {
             if (elementAt != -1) {
                 linkedList.removeAt(elementAt);
                 removed = true;
-                size-=1;
+                size -= 1;
             }
         }
 

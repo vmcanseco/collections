@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6e54e5b-82d4-4463-8f0d-3bc4d43562f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/hashset/HashSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/hashset/HashSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/java/collections/list/linkedlist/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/training/java/collections/list/hashset/HashSetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/training/java/collections/list/hashset/HashSetTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,17 +60,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.HashSetTest">
-    <configuration name="ide-scripting" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <setting name="path" value="file://$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$APPLICATION_CONFIG_DIR$/consoles/ide" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.HashSetTest.whenItemAdded_thenSizeOne">
     <configuration name="HashSetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="collections" />
       <extension name="coverage">
@@ -101,6 +87,22 @@
       <option name="PACKAGE_NAME" value="training.java.collections.list.hashset" />
       <option name="MAIN_CLASS_NAME" value="training.java.collections.list.hashset.HashSetTest" />
       <option name="METHOD_NAME" value="whenItemAdded_thenElementFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HashSetTest.whenItemAdded_thenSizeOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="collections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="training.java.collections.list.hashset.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="training.java.collections.list.hashset" />
+      <option name="MAIN_CLASS_NAME" value="training.java.collections.list.hashset.HashSetTest" />
+      <option name="METHOD_NAME" value="whenItemAdded_thenSizeOne" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,19 +141,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Groovy.ide-scripting" />
       <item itemvalue="JUnit.HashSetTest.whenItemAdded_thenElementFound" />
       <item itemvalue="JUnit.HashSetTest.whenNoItemAdded_thenElementNotFound" />
       <item itemvalue="JUnit.HashSetTest.whenItemRemoved_thenTrue" />
       <item itemvalue="JUnit.HashSetTest" />
+      <item itemvalue="JUnit.HashSetTest.whenItemAdded_thenSizeOne" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HashSetTest.whenItemAdded_thenSizeOne" />
         <item itemvalue="JUnit.HashSetTest" />
         <item itemvalue="JUnit.HashSetTest.whenItemRemoved_thenTrue" />
         <item itemvalue="JUnit.HashSetTest.whenNoItemAdded_thenElementNotFound" />
         <item itemvalue="JUnit.HashSetTest.whenItemAdded_thenElementFound" />
-        <item itemvalue="Groovy.ide-scripting" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +176,7 @@
       <workItem from="1662597780202" duration="14866000" />
       <workItem from="1663542548543" duration="2654000" />
       <workItem from="1663545347888" duration="112000" />
-      <workItem from="1663545560393" duration="1679000" />
+      <workItem from="1663545560393" duration="2655000" />
     </task>
     <servers />
   </component>
