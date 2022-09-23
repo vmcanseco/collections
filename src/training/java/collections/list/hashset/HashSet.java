@@ -8,15 +8,16 @@ public class HashSet<H> implements ISet<H> {
     private static final int LOAD_FACTOR = 5;
     private LinkedList<H>[] buckets;
 
+    @SuppressWarnings("unchecked")
     public HashSet() {
-        buckets = (LinkedList<H>[]) new Object[16];
+        buckets = new LinkedList[16];
     }
 
 
     public void add(H element) {
 
-        int index = element.hashCode() % buckets.length;
-        LinkedList<H> linkedList = buckets[index];//bucket.getAt(index);
+        int index = Math.abs(element.hashCode()) % buckets.length;
+        LinkedList<H> linkedList = buckets[index];
         if (linkedList == null) {
             linkedList = new LinkedList<>();
             linkedList.add(element);
@@ -35,14 +36,15 @@ public class HashSet<H> implements ISet<H> {
 
     }
 
+    @SuppressWarnings("unchecked")
     private void redistributeBuckets() {
         IIterator<H> iterator = iterator();
-        LinkedList<H> tempBuckets[] = (LinkedList<H>[]) new Object[buckets.length * 2];
+        LinkedList<H>[] tempBuckets = new LinkedList[buckets.length * 2];
 
         while (iterator.hasNext()) {
             H element = iterator.next();
 
-            int index = element.hashCode() % tempBuckets.length;
+            int index = Math.abs(element.hashCode()) % tempBuckets.length;
 
             LinkedList<H> linkedList = tempBuckets[index];
             if (linkedList == null) {
@@ -59,19 +61,14 @@ public class HashSet<H> implements ISet<H> {
 
     @Override
     public boolean contains(H element) {
-        boolean exists = false;
-        int index = element.hashCode() % buckets.length;
-        LinkedList<H> linkedList = buckets[index];
-        if (linkedList != null) {
-            exists = linkedList.contains(element);
-        }
-        return exists;
+        int index = Math.abs(element.hashCode()) % buckets.length;
+        return buckets[index] != null && buckets[index].contains(element);
     }
 
     @Override
     public boolean remove(H element) {
         boolean removed = false;
-        int index = element.hashCode() % buckets.length;
+        int index = Math.abs(element.hashCode()) % buckets.length;
         LinkedList<H> linkedList = buckets[index];
         if (linkedList != null) {
             int elementAt = linkedList.indexOf(element);
@@ -102,8 +99,15 @@ public class HashSet<H> implements ISet<H> {
         int currentBucketSlot = -1;
 
         private IIterator<H> getNextIterator() {
+            do {
+                ++currentBucketSlot;
+            } while (currentBucketSlot < buckets.length && buckets[currentBucketSlot]!=null );
+            
+            return currentBucketSlot< buckets.length  ? buckets[currentBucketSlot].iterator() : null;
 
-            IIterator<H> tmp = null;
+            /*IIterator<H> tmp = null;
+
+
             for (currentBucketSlot += 1; currentBucketSlot < buckets.length; currentBucketSlot += 1) {
                 if (buckets[currentBucketSlot] != null) {
                     tmp = buckets[currentBucketSlot].iterator();
@@ -111,33 +115,34 @@ public class HashSet<H> implements ISet<H> {
                 }
             }
 
-            return tmp;
+            return tmp;*/
 
         }
 
         @Override
         public boolean hasNext() {
-            boolean hasNext = false;
+            if (currentIterator == null || !currentIterator.hasNext()){
+                currentIterator = getNextIterator();
+            }
+
+            return currentIterator!=null && currentIterator.hasNext();
+
+            /*boolean hasNext = false;
 
             currentIterator = getNextIterator();
 
             while (currentBucketSlot < buckets.length && !hasNext) {
 
-                //if (currentIterator != null) {
                 if (currentIterator.hasNext()) {
                     hasNext = true;
                 } else {
                     currentIterator = getNextIterator();
                 }
 
-                /*} else {
-                    currentIterator = getNextIterator();
-                }*/
-
 
             }
 
-            return hasNext;
+            return hasNext;*/
         }
 
         @Override
