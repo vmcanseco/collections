@@ -3,6 +3,8 @@ package training.java.collections.list.hashset;
 import training.java.collections.list.IIterator;
 import training.java.collections.list.linkedlist.LinkedList;
 
+import java.util.NoSuchElementException;
+
 public class HashSet<H> implements ISet<H> {
     private int size;
     private static final int LOAD_FACTOR = 5;
@@ -101,7 +103,7 @@ public class HashSet<H> implements ISet<H> {
         private IIterator<H> getNextIterator() {
             do {
                 ++currentBucketSlot;
-            } while (currentBucketSlot < buckets.length && buckets[currentBucketSlot]!=null );
+            } while (currentBucketSlot < buckets.length && buckets[currentBucketSlot]==null );
             
             return currentBucketSlot< buckets.length  ? buckets[currentBucketSlot].iterator() : null;
 
@@ -147,7 +149,11 @@ public class HashSet<H> implements ISet<H> {
 
         @Override
         public H next() {
-            return currentIterator.next();
+            if (hasNext()){
+                return currentIterator.next();
+            }else {
+                throw new NoSuchElementException();
+            }
         }
     }
 

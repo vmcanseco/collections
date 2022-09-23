@@ -30,6 +30,7 @@ public class HashSetTest {
 
         IIterator<String> iterator = hashSet.iterator();
         Assertions.assertTrue(iterator.hasNext());
+        Assertions.assertEquals("One",iterator.next());
         Assertions.assertFalse(iterator.hasNext());
     }
 
@@ -62,6 +63,22 @@ public class HashSetTest {
         Assertions.assertTrue(removed);
         //System.out.println(hashSet.getSize());
         Assertions.assertEquals(0,hashSet.getSize());
+
+    }
+
+    @Test
+    public  void whenMultiplesItemAdded_thenRedistribute(){
+         final int LIMIT=90;
+        ISet<String> hashSet = new HashSet<>();
+        String first=null,firstAfter;
+        for(int i=0;i<LIMIT;i++){
+            hashSet.add(String.valueOf(i));
+            if (i==0){
+                first = hashSet.iterator().next();
+            }
+        }
+        firstAfter = hashSet.iterator().next();
+        Assertions.assertNotEquals(first,firstAfter);
 
     }
 }
