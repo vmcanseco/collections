@@ -59,14 +59,24 @@ public class LinkedHashSet<H> implements ISet<H> {
         LinkedHashNode<H> node = bucket[index];
         boolean removed = false;
         LinkedHashNode<H> previous=null;
+        LinkedHashNode<H> before;
+        LinkedHashNode<H> after;
         while (node!=null){
             if (node.data.equals(element)){
+                before = node.before;
+                after = node.after;
+                if (before!=null){
+                    before.after = after;
+                }
+                if (after!=null){
+                    after.before = before;
+                }
                 if (previous!=null){
                     previous.next = node.next;
                 }else{
                     bucket[index]=null;
                 }
-                removed =true;
+                removed=true;
                 size--;
             }
             previous = node;

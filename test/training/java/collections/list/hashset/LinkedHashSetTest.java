@@ -73,4 +73,57 @@ public class LinkedHashSetTest {
             i++;
         }
     }
+
+    @Test
+    public void whenItemRemoved_thenNoElements(){
+        ISet<String> hashSet = new LinkedHashSet<>();
+        hashSet.add("One");
+
+        Assertions.assertTrue(hashSet.remove("One"));
+        Assertions.assertEquals(0,hashSet.getSize());
+    }
+
+    @Test
+    public void whenItemNotAdded_thenCantRemove(){
+        ISet<String> hashSet = new LinkedHashSet<>();
+        hashSet.add("One");
+
+        Assertions.assertFalse(hashSet.remove("Two"));
+        Assertions.assertEquals(1,hashSet.getSize());
+    }
+
+    @Test
+    public void whenItemRemoved_thenOrderKept(){
+        ISet<String> hashSet = new LinkedHashSet<>();
+        hashSet.add("One");
+        hashSet.add("Two");
+        hashSet.add("Three");
+        hashSet.add("Four");
+        hashSet.add("Five");
+
+        IIterator<String> iterator = hashSet.iterator();
+        Assertions.assertTrue(hashSet.remove("Three"));
+        Assertions.assertEquals("One",iterator.next());
+        Assertions.assertEquals("Two",iterator.next());
+        Assertions.assertEquals("Four",iterator.next());
+        Assertions.assertEquals("Five",iterator.next());
+    }
+
+    @Test
+    public void whenItemRemoved_thenSequenceKept(){
+        ISet<String> hashSet = new LinkedHashSet<>();
+        for (int i =1;i<=80;i++){
+            hashSet.add(String.valueOf(i));
+        }
+        Assertions.assertTrue(hashSet.remove(String.valueOf(50)));
+        Assertions.assertFalse(hashSet.contains(String.valueOf(50)));
+        IIterator<String> iterator = hashSet.iterator();
+        int i=1;
+        while (iterator.hasNext()){
+            if (i!=50){
+                Assertions.assertEquals(String.valueOf(i),iterator.next());
+            }
+            i++;
+        }
+    }
 }
