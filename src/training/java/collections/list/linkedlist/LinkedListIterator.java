@@ -1,6 +1,6 @@
 package training.java.collections.list.linkedlist;
 
-import training.java.collections.list.IIterator;
+import training.java.collections.IIterator;
 
  class LinkedListIterator<H> implements IIterator<H> {
 

@@ -1,6 +1,6 @@
-package training.java.collections.list.hashset;
+package training.java.collections.set;
 
-import training.java.collections.list.IIterator;
+import training.java.collections.IIterator;
 
 interface  ISet<H> {
 

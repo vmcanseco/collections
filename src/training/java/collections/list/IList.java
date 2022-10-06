@@ -1,5 +1,7 @@
 package training.java.collections.list;
 
+import training.java.collections.IIterator;
+
 public interface IList<T> {
     void add(T element);
 

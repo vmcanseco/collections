@@ -1,4 +1,4 @@
-package training.java.collections.list;
+package training.java.collections;
 
 public interface IIterator<T> {
 

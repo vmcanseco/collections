@@ -2,9 +2,8 @@ package training.java.collections.list.linkedlist;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import training.java.collections.list.IIterator;
+import training.java.collections.IIterator;
 import training.java.collections.list.IList;
-import training.java.collections.list.arraylist.ArrayList;
 
 public class LinkedListTest {
 

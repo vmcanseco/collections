@@ -1,7 +1,7 @@
 package training.java.collections.list.linkedlist;
 
 import training.java.collections.list.BaseList;
-import training.java.collections.list.IIterator;
+import training.java.collections.IIterator;
 import training.java.collections.list.IList;
 
 public class LinkedList<H> extends BaseList<H> implements IList<H> {

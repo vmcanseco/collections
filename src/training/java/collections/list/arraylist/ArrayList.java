@@ -1,7 +1,7 @@
 package training.java.collections.list.arraylist;
 
 import training.java.collections.list.BaseList;
-import training.java.collections.list.IIterator;
+import training.java.collections.IIterator;
 import training.java.collections.list.IList;
 import training.java.collections.list.linkedlist.LinkedList;
 
