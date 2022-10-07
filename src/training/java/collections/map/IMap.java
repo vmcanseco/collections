@@ -9,4 +9,5 @@ public interface IMap<K,V> {
     V get(K key);
     boolean containsValue(V value);
     IIterator<Entry<K,V>> iterator();
+    int getSize();
 }
